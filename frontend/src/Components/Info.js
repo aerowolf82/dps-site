@@ -1,6 +1,6 @@
 // import SpaceCraftList from './SpaceCraftList.js'
 // import PadsList from './PadsList.js'
-import './Home.css'
+import './info.css'
 import { CardMedia, Grid, Card, Typography, CardContent, Box } from '@mui/material'
 // import { withStyles } from "@material-ui/core/styles";
 
@@ -11,7 +11,7 @@ import { CardMedia, Grid, Card, Typography, CardContent, Box } from '@mui/materi
 //     }
 //   })(Typography);
 
-function Home() {
+function Info() {
     return (
 
     <div>
@@ -21,7 +21,7 @@ function Home() {
                     <Card variant = 'outlined' style={{backgroundColor: "#587da5"}}>
                         <CardContent className = 'greeting'>
                             <Typography color = 'white' fontFamily = 'Rockwell'>
-                                <h1>Welcome to the Headhunters!</h1>
+                                <h1>Information about the Fleet</h1>
                                 <Grid container justifyContent = 'center' spacing = {30}>
                                     <Grid item xs = {6} sm = {6} md = {6} lg = {6}>
                                         <p>Future Content</p>
@@ -47,4 +47,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Info;

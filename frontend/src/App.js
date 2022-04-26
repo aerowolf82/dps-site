@@ -1,11 +1,14 @@
 import logo from './images/hhlogotest.svg';
 import './App.css';
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from './Components/Home'
 import Header from './Components/Header'
+import Info from './Components/Info'
 
 
 function App() {
+
+  
   return (
     <Router>
       <div className ="background" >
@@ -18,47 +21,12 @@ function App() {
             </nav>
           </header>
 
-        {/* <Route path="/spacecraft">
-          <SpaceCraftList
-            spaceData = {spaceData} 
-            setFilteredSpaceData = {setFilteredSpaceData} 
-            filteredSpaceData = {filteredSpaceData} 
-            isFilteredSpace = {isFilteredSpace} 
-            setIsFilteredSpace={setIsFilteredSpace}
-            isOpenSC = {isOpenSC}
-            setIsOpenSC = {setIsOpenSC}
-            isFavorited = {isFavorited}
-            setIsFavorited = {setIsFavorited}
-            favorites = {favorites}
-            setFavorites = {setFavorites}
-          />
-        </Route>
-        <Route path="/pads">
-          <PadsList 
-            padData = {padData}
-            isFilteredPads = {isFilteredPads}
-            setIsFilteredPads = {setIsFilteredPads}
-            filteredPadData = {filteredPadData}
-            setFilteredPadData = {setFilteredPadData}
-            isOpenPads = {isOpenPads}
-            setIsOpenPads = {setIsOpenPads}
-          />
-        </Route>
-        <Route path="/favorites">
-          <FavoritesList
-            isOpenSC = {isOpenSC}
-            setIsOpenSC = {setIsOpenSC}
-          />
-        </Route> */}
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/home">
-          <Home />
-        </Route>
+          <Route path="/info" component={Info} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
+        </div>
       </div>
-    </div>
-  </Router>
+    </Router>
   );
 }
 

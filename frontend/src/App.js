@@ -10,23 +10,25 @@ function App() {
 
   
   return (
-    <Routes>
+    
       <div className ="background" >
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <nav className="Nav">
-              <Route path='/:page' element={<Header />} />  
-              <Route exact path='/' element={<Header />} />
+              <Routes>
+                <Route path='/:page' element={<Header />} />  
+                <Route exact path='/' element={<Header />} />
+              </Routes>
             </nav>
           </header>
-
-          <Route path="/info" element={<Info />} />
-          <Route exact path="/home" element={<Home />} />
-          <Route exact path="/" element={<Home />} />
+          <Routes>
+            <Route path="/info" element={<Info />} />
+            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
+          </Routes>
         </div>
       </div>
-    </Routes>
   );
 }
 

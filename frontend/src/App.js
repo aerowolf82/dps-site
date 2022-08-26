@@ -4,7 +4,8 @@ import {Routes, Route} from "react-router-dom";
 import Home from './Components/Home'
 import Header from './Components/Header'
 import Info from './Components/Info'
-
+import Guides from './Components/Guides'
+import Tools from './Components/Tools'
 
 function App() {
 
@@ -24,6 +25,8 @@ function App() {
           </header>
           <Routes>
             <Route path="/info" element={<Info />} />
+            <Route path="/guides" element={<Guides />} />
+            <Route path="/tools" element={<Tools />} />
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/" element={<Home />} />
           </Routes>
